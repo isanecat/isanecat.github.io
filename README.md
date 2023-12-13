@@ -5,7 +5,7 @@
 
     Web Store artık 3. versiyon manifestleri kabul etmektedir. 3. versiyonda service worker yapısı gelmiştir. service_worker olarak background.js  tanımlanır. 
 
-    - "action" : 
+    **- "action" :** 
     
         - "default_icon" : Eklentinin ikonu. Bir png dosyasıdır.
         
@@ -13,22 +13,22 @@
 
         - "default_popup" : popup.html dosyasıdır. Aynı isimli olan popup.js dosyasını manifest json içine yazmak gerekmez.
 
-    - "icons" : default_icon'dan farklı ikonlar tanımlanabilmesi içindir. 16 favicon'dur. 32 windows için gereklidir. 48 extension sayfası içindir. 128 chrome web store da kullanılır.
+    **- "icons" :** default_icon'dan farklı ikonlar tanımlanabilmesi içindir. 16 favicon'dur. 32 windows için gereklidir. 48 extension sayfası içindir. 128 chrome web store da kullanılır.
 
-    - "background" : browser'da gerçekleştirilen işlemleri background ile belirtilmiş service worker'lar ile takip edebilirsiniz. 
+    **- "background" :** browser'da gerçekleştirilen işlemleri background ile belirtilmiş service worker'lar ile takip edebilirsiniz. 
 
         - "service_worker" : service worker olarak çalışan js dosyası yazılır. genelde background.js olarak adlandırılır. Sayfa görünümünü bu dosya ile değiştirmek mümkündür. 
         
-        - "persistent" : true veya false olabilir. true olursa background script devamlı çalışır. false olursa sadece tetiklendiğinde çalışır. true olursa kaynak kullanımı yüksek olabilir. Bu sebeple parametrik yapılmıştır. false olması genel kabul görmüştür.
+        **- "persistent" :** true veya false olabilir. true olursa background script devamlı çalışır. false olursa sadece tetiklendiğinde çalışır. true olursa kaynak kullanımı yüksek olabilir. Bu sebeple parametrik yapılmıştır. false olması genel kabul görmüştür.
 
-    - "content_scripts" : 
-        - "js" :  Manipulate etmek istediğimiz sayfalar için kullanacağımız js dosyalarını belirtiriz. Genelde content.js olarak isimlendirilir.
+    **- "content_scripts" :**
+        - "js" :  Manipulate etmek istediğimiz sayfalar için kullanacağımız js dosyalarını belirtiriz. Genelde content.js olarak isimlendirilir. Ama isim önemli değildir.
         - "matches" : Okumak ve değiştirmek istediğimiz sayfalarını yazarız. "Match patterns" olarak aratılabilecek bir konsept ile bu path yazılır.
         - Buraya css dosyası da yazıp, o web sayfasının css lerine de müdahale edebilirsin.
 
     - manifest.json da content_scripts'in içindeki js dosyası matches bölümünde belirtilen sayfa içeriklerini değiştirme hakkını elde eder. Bu js dosyası content.js dir.
 
-    - "permissions" :
+    **- "permissions" :**
 
         - "scripting" : 
         - "activeTab" : Eklentinin etkinleştirildiği tabda script çalıştırarak bu sekmeyi okuma ve değiştirme izni.
