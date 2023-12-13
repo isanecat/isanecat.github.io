@@ -9,7 +9,7 @@
     
         - "default_icon" : Eklentinin ikonu. Bir png dosyasıdır.
         
-        - "default_title" : Eklentinin adı
+        - "default_title" : Eklentinin adı 
 
         - "default_popup" : popup.html dosyasıdır. Aynı isimli olan popup.js dosyasını manifest json içine yazmak gerekmez.
 
@@ -41,7 +41,11 @@
         - "storage" : Diske yazma izni 
         - "omnibox" : "keyword" kelimesi ile yazılan kelimenin adres çubuğuna yazılması ile eklentinin tetiklenmesi izni.
         - "minimum_chrome_version" : Eklenti kurulurken en düşük chrome versiyonunu kontrol eder. 
-        - "host_permissions" : Belirtilen host ile iletişim kurma izni. Kurulum sırasında kullanıcıya uyarı gider.
+        - "host_permissions" : Belirtilen host ile iletişim kurma izni. Kurulum sırasında kullanıcıya uyarı gider. API kullanımı içindir. 
+        - "optional_permissions" : İsteğe bağlı izinler içindir. Örneğin bunun altındaki "topSites", tarayıcıda en çok ziyaret edilen sitelerin listesine erişim izni verir.
+        - "optional_host_permissions" : İsteğe bağlı host erişimleri için izindir. Bunun altında "host_permissions"'ın altına izin verilen hostların ismi yazılır. API kullanımı içindir. 
+        - "alarms" : Zamanlanmış görevleri yerine getirebilmesi için gereken izindir.
+
 
 
     - "options_page" : options.html sayfası tanımlanır.
